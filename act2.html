@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array map Function</title>
+    <style>
+        body{
+            font-family: monospace;
+            font-size: 30px;
+        }
+        .highlight{
+            color: red;
+            padding: 10px;
+            border: 2px solid red;
+            background-color: lightyellow;
+            max-width: fit-content;
+        }
+    </style>
+</head>
+<body>
+
+     <h1>Use of Array Map function</h1>
+     <p>[2,4,6,8,10]</p>
+
+     <p id="demo"></p>    
+     <button onclick="getSquare()">GetSquare</button>
+
+
+     <script>
+         function getSquare() {
+             let numbers = [2,4,6,8,10];
+             let squares = numbers.map(function(num) {
+                 return num * num;
+             });
+             document.getElementById("demo").innerHTML = "Squares: " + squares.join(", ");
+             document.getElementById("demo").classList.add("highlight");
+         }
+
+     </script>
+    
+</body>
+</html>
