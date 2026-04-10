@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Ascending Descending</title>
+</head>
+<body>
+
+    <p id="numbers">[12, 65, 4, 7, 99,1]</p> 
+    <!-- Ascending -->
+    <!-- 1,4,7,12,65,99 -->
+     <button onclick="sortAscending(event)">Sort Ascending</button>
+
+
+    <!-- Descending -->
+    <!-- 99,65,12,7,4,1 -->
+     <button onclick="sortDescending(event)">Sort Descending</button>
+
+     <p id="demo1"></p>
+     <p id="demo2"></p>
+
+
+     <script>
+
+        function sortAscending(event) {
+            event.preventDefault();
+            let numbers = [12, 65, 4, 7, 99,1];
+            numbers.sort(function(a, b) {
+                return a - b;
+            });
+            document.getElementById("demo1").innerHTML = "Sorted Ascending: " + numbers.join(", ");
+        }
+
+        function sortDescending(event) {
+            event.preventDefault();
+            let numbers = [12, 65, 4, 7, 99,1];
+            numbers.sort(function(a, b) {
+                return b - a;
+            });
+            document.getElementById("demo2").innerHTML = "Sorted Descending: " + numbers.join(", ");
+        }
+
+
+     </script>
+    
+</body>
+</html>
